@@ -1,0 +1,103 @@
+/*
+Stylesheet for app
+* defines various shades of blue for the colour palette
+.base styles the gridPane
+.tab styles the tab buttons
+.tab-header-area .tab-header-background changes the grey background colour of the tabPane
+.button styles buttons
+.menu styles menu, menu bar, and menu items
+All input fields are set to off white blue
+The hover and selected colours for the combo box are changed to match the colour scheme
+The scrollbar for the text area is also changed to match the colour scheme
+*/
+
+* {
+  -fx-border-colour: #5585b5;
+  -fx-button-colour: #53a8b6;
+  -fx-back-colour: #bbe4e9;
+  -fx-tab-back-colour: #79c2d0;
+  -fx-text-field-colour: #ecf7f9;
+}
+
+.base{
+	-fx-background-color: -fx-back-colour;
+	-fx-font-weight: 500;
+	-fx-border-style: solid;
+	-fx-border-width: 7px 7px 7px 7px;
+	-fx-border-color: -fx-border-colour;
+	-fx-padding: 10px 20px 10px 20px;
+}
+.tab{
+	-fx-background-color: -fx-back-colour;
+	-fx-border-radius: 5px;
+	-fx-font-size: 1em;
+}
+.tab-header-area .tab-header-background {
+ 	-fx-background-color: -fx-tab-back-colour
+}
+
+.button {
+	-fx-background-color: -fx-button-colour;
+	-fx-border-radius: 5px;
+	-fx-font-size: 1em;
+}
+
+.menu {
+	-fx-background-color: -fx-tab-back-colour;
+	-fx-border-radius: 5px;
+	-fx-font-size: 1em;
+}
+
+.date-picker, .combo-box, .combo-box .list-cell, .text-field, .text-area .content{
+    -fx-background-color: -fx-text-field-colour;
+}
+
+.text-area{
+    -fx-font-family: monospace;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected{
+    -fx-text-fill: -fx-border-colour
+}
+.combo-box-popup .list-view .list-cell:filled:hover{
+    -fx-text-fill: -fx-button-colour
+}
+
+.text-area .scroll-bar:horizontal .track,
+.text-area .scroll-bar:vertical .track{
+    -fx-background-color:-fx-back-colour;
+}
+
+.text-area .scroll-bar:vertical .increment-button,
+.text-area .scroll-bar:vertical .decrement-button,
+.text-area .scroll-bar:horizontal .increment-button,
+.text-area .scroll-bar:horizontal .decrement-button {
+    -fx-background-color:transparent;
+}
+
+.text-area .scroll-bar:horizontal .thumb,
+.text-area .scroll-bar:vertical .thumb {
+    -fx-background-color: -fx-button-colour;
+}
+
+.check-box {
+	-fx-border-style: solid;
+	-fx-border-width: 2px;
+	-fx-border-color: -fx-text-field-colour;
+}
+
+.check-box:selected > .box {
+    /* background color for selected checkbox */
+    -fx-background-color: -fx-back-colour;
+}
+
+.check-box > .box {
+    /* background color of unselected checkbox */
+    -fx-background-color: -fx-text-field-colour;
+}
+
+.check-box:selected > .box > .mark,
+.check-box:indeterminate  > .box > .mark {
+    /* modify mark color */
+    -fx-background-color: -fx-border-colour;
+}
